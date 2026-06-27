@@ -81,3 +81,9 @@ print (f"\nPredictions: \n{predictions}")
 
 final_predictions = (predictions > 0.5).astype(int)
 print(f"\nFinal Predictions: {final_predictions.flatten()}")
+
+sample = np.array([[1, 0]])
+hidden_predictions = sigmoid(sample @ hidden_weights + hidden_bias)
+prediction = sigmoid(hidden_predictions @ weights + bias)
+print(f"\nInference for {sample.flatten()}: {prediction[0][0]:.6f}")
+print(f"Class: {int (prediction[0, 0] > 0.5)}")
