@@ -29,10 +29,10 @@ bias = np.zeros((1, 1))
 hidden_weights = np.random.rand(2, 2)
 hidden_bias = np.zeros((1, 2))
 
-learning_rate = 1.0
-
 # bigger learning rate for faster convergence
 # but can lead to overshooting the correct solution if too high
+learning_rate = 1.0
+
 epochs = 50000
 
 for epoch in range(epochs):
